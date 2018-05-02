@@ -1,0 +1,26 @@
+service: process-inbox
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+provider:
+  name: aws
+  runtime: nodejs6.10
+functions:
+  getInbox:
+    handler: app/router.getInbox
+    events:
+      - http:
+          method: get
+          path: inbox/get
+  sendTo:
+    handler: app/router.sendTo
+    events:
+      - http:
+          method: post
+          path: inbox/send
+  fetchProcess:
+    handler: app/router.fetchProcess
+    events:
+      - http:
+          method: post
+          path: inbox/fetch

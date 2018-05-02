@@ -1,0 +1,16 @@
+{
+  "name": "serverless-inbox",
+  "version": "0.1.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "serverless-offline": "^3.20.3",
+    "serverless-plugin-typescript": "^1.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
