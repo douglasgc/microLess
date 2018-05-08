@@ -4,8 +4,15 @@
   "description": "",
   "main": "handler.js",
   "dependencies": {
+    "ioredis": "^3.2.2",
+    "mongodb": "^3.0.8",
+    "mongoose": "^5.0.17",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.1.0",
     "serverless-offline": "^3.20.3",
-    "serverless-plugin-typescript": "^1.1.5"
+    "serverless-plugin-typescript": "^1.1.5",
+    "typedi": "^0.7.3"
   },
   "devDependencies": {},
   "scripts": {
