@@ -5,6 +5,9 @@ plugins:
 provider:
   name: aws
   runtime: nodejs6.10
+  environment:
+    REDIS_HOST: 127.0.0.1:6379
+    DB_HOST: mongodbstring
 functions:
   getInbox:
     handler: app/router.getInbox
