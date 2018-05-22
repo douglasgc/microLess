@@ -18,10 +18,10 @@ let InboxController = class InboxController {
         // Cria um Subject que sera a response da api
         let res = new rxjs_1.ReplaySubject();
         // Inicia o Mongo DB
-        this.connectMongo
-            .connection().subscribe(() => {
-            // Quando estar conectado
-        });
+        //this.connectMongo
+        //.connection().subscribe(()=> {
+        // Quando estar conectado
+        //});
         // Seta o Server Redis
         let redis = this.connectRedis.getConnection();
         // Exemplos de uso

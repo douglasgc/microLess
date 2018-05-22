@@ -1,7 +1,6 @@
 import { Service, Inject } from "typedi";
 import { ConnectMongo } from './../databases/mongoose';
 import { ConnectRedis } from './../databases/redis';
-
 import { ReplaySubject } from 'rxjs';
 
 @Service()
@@ -21,10 +20,10 @@ export class InboxController {
 		let res = new ReplaySubject();
 
 		// Inicia o Mongo DB
-		this.connectMongo
-		.connection().subscribe(()=> {
+		//this.connectMongo
+		//.connection().subscribe(()=> {
 			// Quando estar conectado
-		});
+		//});
 
 		// Seta o Server Redis
 		let redis = this.connectRedis.getConnection();

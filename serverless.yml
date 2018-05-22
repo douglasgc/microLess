@@ -5,11 +5,15 @@ plugins:
 provider:
   name: aws
   runtime: nodejs6.10
+  environment:
+    REDIS_HOST: 127.0.0.1:6379
+    DB_HOST: mongodb://
 functions:
   getInbox:
     handler: app/router.getInbox
     events:
       - http:
+          cors: true
           method: get
           path: inbox/get
   sendTo:
@@ -17,10 +21,12 @@ functions:
     events:
       - http:
           method: post
+          cors: true
           path: inbox/send
   fetchProcess:
     handler: app/router.fetchProcess
     events:
       - http:
           method: post
+          cors: true
           path: inbox/fetch

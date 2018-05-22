@@ -2,9 +2,6 @@ import {Container,Service} from "typedi";
 import {Observable} from 'rxjs';
 import * as mongoose from 'mongoose';
 
-//Declare Functions
-mongoose.Promise = global.Promise;
-
 @Service()
 export class ConnectMongo {
 	con:any;
